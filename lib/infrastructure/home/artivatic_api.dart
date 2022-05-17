@@ -15,16 +15,15 @@ class ArtivaticRepo implements IArtivaticApi {
   Future<Either<MainFailure, List<ArtivaticApiModel>>>
       getArtivaticApis() async {
     try {
-      var parameter = {
-        "user_id": 1,
-      };
-      final Response responce = await Dio(BaseOptions())
-          .post(Endpoints.artivaticapi, data: parameter);
+      final Response responce = await Dio(BaseOptions()).get(
+        Endpoints.artivaticapi,
+      );
       if (responce.statusCode == 200 || responce.statusCode == 201) {
         Map<String, dynamic> jsondata = jsonDecode(responce.data);
         final popularList = (jsondata["rows"] as List).map((e) {
           return ArtivaticApiModel.fromJson(e);
         }).toList();
+        log(popularList.toString());
         return Right(popularList);
       } else {
         return const Left(MainFailure.serverFailure());

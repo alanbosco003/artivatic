@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:artivatic/core/failures/mainFailure.dart';
 import 'package:artivatic/modules/home/repository/i_artivatic_api.dart';
 import 'package:bloc/bloc.dart';
@@ -18,6 +20,7 @@ class HomeblocBloc extends Bloc<HomeblocEvent, HomeblocState> {
       emit(state.copyWith(isLoading: true, apiFailureOrSuccessOption: none()));
       final Either<MainFailure, List<ArtivaticApiModel>> apiResponce =
           await _artivaticApi.getArtivaticApis();
+      log(apiResponce.toString());
       emit(apiResponce.fold(
           (failure) => state.copyWith(
                 isLoading: false,

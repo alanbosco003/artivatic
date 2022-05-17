@@ -2,11 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 
-class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
+import '../bloc/homebloc/homebloc_bloc.dart';
 
+class Home extends StatelessWidget {
+  Home({Key? key}) : super(key: key);
+  late final HomeblocBloc homebloc;
   @override
   Widget build(BuildContext context) {
+    // BlocProvider.of<SearchBloc>(context).add(const SearchEvent.initialze());
+
+    // BlocProvider.of<PopularpackagesBloc>(context)
+    //     .add(const PopularpackagesEvent.getpopularpackages());
     return Scaffold(
       body: Center(
         child: Text(
