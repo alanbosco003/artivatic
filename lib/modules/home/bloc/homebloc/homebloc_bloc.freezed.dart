@@ -18,8 +18,8 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$HomeblocEventTearOff {
   const _$HomeblocEventTearOff();
 
-  _Started started() {
-    return const _Started();
+  _GetArtivaticApi getArtivaticApi() {
+    return const _GetArtivaticApi();
   }
 }
 
@@ -30,33 +30,33 @@ const $HomeblocEvent = _$HomeblocEventTearOff();
 mixin _$HomeblocEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function() getArtivaticApi,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function()? getArtivaticApi,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function()? getArtivaticApi,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_GetArtivaticApi value) getArtivaticApi,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_GetArtivaticApi value)? getArtivaticApi,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_GetArtivaticApi value)? getArtivaticApi,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -80,35 +80,47 @@ class _$HomeblocEventCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$StartedCopyWith<$Res> {
-  factory _$StartedCopyWith(_Started value, $Res Function(_Started) then) =
-      __$StartedCopyWithImpl<$Res>;
+abstract class _$GetArtivaticApiCopyWith<$Res> {
+  factory _$GetArtivaticApiCopyWith(
+          _GetArtivaticApi value, $Res Function(_GetArtivaticApi) then) =
+      __$GetArtivaticApiCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$StartedCopyWithImpl<$Res> extends _$HomeblocEventCopyWithImpl<$Res>
-    implements _$StartedCopyWith<$Res> {
-  __$StartedCopyWithImpl(_Started _value, $Res Function(_Started) _then)
-      : super(_value, (v) => _then(v as _Started));
+class __$GetArtivaticApiCopyWithImpl<$Res>
+    extends _$HomeblocEventCopyWithImpl<$Res>
+    implements _$GetArtivaticApiCopyWith<$Res> {
+  __$GetArtivaticApiCopyWithImpl(
+      _GetArtivaticApi _value, $Res Function(_GetArtivaticApi) _then)
+      : super(_value, (v) => _then(v as _GetArtivaticApi));
 
   @override
-  _Started get _value => super._value as _Started;
+  _GetArtivaticApi get _value => super._value as _GetArtivaticApi;
 }
 
 /// @nodoc
 
-class _$_Started implements _Started {
-  const _$_Started();
+class _$_GetArtivaticApi
+    with DiagnosticableTreeMixin
+    implements _GetArtivaticApi {
+  const _$_GetArtivaticApi();
 
   @override
-  String toString() {
-    return 'HomeblocEvent.started()';
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'HomeblocEvent.getArtivaticApi()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+        .add(DiagnosticsProperty('type', 'HomeblocEvent.getArtivaticApi'));
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _Started);
+        (other.runtimeType == runtimeType && other is _GetArtivaticApi);
   }
 
   @override
@@ -117,27 +129,27 @@ class _$_Started implements _Started {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function() getArtivaticApi,
   }) {
-    return started();
+    return getArtivaticApi();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function()? getArtivaticApi,
   }) {
-    return started?.call();
+    return getArtivaticApi?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function()? getArtivaticApi,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started();
+    if (getArtivaticApi != null) {
+      return getArtivaticApi();
     }
     return orElse();
   }
@@ -145,42 +157,50 @@ class _$_Started implements _Started {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_GetArtivaticApi value) getArtivaticApi,
   }) {
-    return started(this);
+    return getArtivaticApi(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_GetArtivaticApi value)? getArtivaticApi,
   }) {
-    return started?.call(this);
+    return getArtivaticApi?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_GetArtivaticApi value)? getArtivaticApi,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started(this);
+    if (getArtivaticApi != null) {
+      return getArtivaticApi(this);
     }
     return orElse();
   }
 }
 
-abstract class _Started implements HomeblocEvent {
-  const factory _Started() = _$_Started;
+abstract class _GetArtivaticApi implements HomeblocEvent {
+  const factory _GetArtivaticApi() = _$_GetArtivaticApi;
 }
 
 /// @nodoc
 class _$HomeblocStateTearOff {
   const _$HomeblocStateTearOff();
 
-  _Initial initial() {
-    return const _Initial();
+  _HomeblocState call(
+      {required bool isLoading,
+      required List<ArtivaticApiModel> apimodel,
+      required Option<Either<MainFailure, List<ArtivaticApiModel>>>
+          apiFailureOrSuccessOption}) {
+    return _HomeblocState(
+      isLoading: isLoading,
+      apimodel: apimodel,
+      apiFailureOrSuccessOption: apiFailureOrSuccessOption,
+    );
   }
 }
 
@@ -189,37 +209,13 @@ const $HomeblocState = _$HomeblocStateTearOff();
 
 /// @nodoc
 mixin _$HomeblocState {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    required TResult orElse(),
-  }) =>
+  bool get isLoading => throw _privateConstructorUsedError;
+  List<ArtivaticApiModel> get apimodel => throw _privateConstructorUsedError;
+  Option<Either<MainFailure, List<ArtivaticApiModel>>>
+      get apiFailureOrSuccessOption => throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $HomeblocStateCopyWith<HomeblocState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -228,6 +224,11 @@ abstract class $HomeblocStateCopyWith<$Res> {
   factory $HomeblocStateCopyWith(
           HomeblocState value, $Res Function(HomeblocState) then) =
       _$HomeblocStateCopyWithImpl<$Res>;
+  $Res call(
+      {bool isLoading,
+      List<ArtivaticApiModel> apimodel,
+      Option<Either<MainFailure, List<ArtivaticApiModel>>>
+          apiFailureOrSuccessOption});
 }
 
 /// @nodoc
@@ -238,100 +239,150 @@ class _$HomeblocStateCopyWithImpl<$Res>
   final HomeblocState _value;
   // ignore: unused_field
   final $Res Function(HomeblocState) _then;
-}
-
-/// @nodoc
-abstract class _$InitialCopyWith<$Res> {
-  factory _$InitialCopyWith(_Initial value, $Res Function(_Initial) then) =
-      __$InitialCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$InitialCopyWithImpl<$Res> extends _$HomeblocStateCopyWithImpl<$Res>
-    implements _$InitialCopyWith<$Res> {
-  __$InitialCopyWithImpl(_Initial _value, $Res Function(_Initial) _then)
-      : super(_value, (v) => _then(v as _Initial));
 
   @override
-  _Initial get _value => super._value as _Initial;
+  $Res call({
+    Object? isLoading = freezed,
+    Object? apimodel = freezed,
+    Object? apiFailureOrSuccessOption = freezed,
+  }) {
+    return _then(_value.copyWith(
+      isLoading: isLoading == freezed
+          ? _value.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      apimodel: apimodel == freezed
+          ? _value.apimodel
+          : apimodel // ignore: cast_nullable_to_non_nullable
+              as List<ArtivaticApiModel>,
+      apiFailureOrSuccessOption: apiFailureOrSuccessOption == freezed
+          ? _value.apiFailureOrSuccessOption
+          : apiFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
+              as Option<Either<MainFailure, List<ArtivaticApiModel>>>,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$HomeblocStateCopyWith<$Res>
+    implements $HomeblocStateCopyWith<$Res> {
+  factory _$HomeblocStateCopyWith(
+          _HomeblocState value, $Res Function(_HomeblocState) then) =
+      __$HomeblocStateCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {bool isLoading,
+      List<ArtivaticApiModel> apimodel,
+      Option<Either<MainFailure, List<ArtivaticApiModel>>>
+          apiFailureOrSuccessOption});
+}
+
+/// @nodoc
+class __$HomeblocStateCopyWithImpl<$Res>
+    extends _$HomeblocStateCopyWithImpl<$Res>
+    implements _$HomeblocStateCopyWith<$Res> {
+  __$HomeblocStateCopyWithImpl(
+      _HomeblocState _value, $Res Function(_HomeblocState) _then)
+      : super(_value, (v) => _then(v as _HomeblocState));
+
+  @override
+  _HomeblocState get _value => super._value as _HomeblocState;
+
+  @override
+  $Res call({
+    Object? isLoading = freezed,
+    Object? apimodel = freezed,
+    Object? apiFailureOrSuccessOption = freezed,
+  }) {
+    return _then(_HomeblocState(
+      isLoading: isLoading == freezed
+          ? _value.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      apimodel: apimodel == freezed
+          ? _value.apimodel
+          : apimodel // ignore: cast_nullable_to_non_nullable
+              as List<ArtivaticApiModel>,
+      apiFailureOrSuccessOption: apiFailureOrSuccessOption == freezed
+          ? _value.apiFailureOrSuccessOption
+          : apiFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
+              as Option<Either<MainFailure, List<ArtivaticApiModel>>>,
+    ));
+  }
 }
 
 /// @nodoc
 
-class _$_Initial implements _Initial {
-  const _$_Initial();
+class _$_HomeblocState with DiagnosticableTreeMixin implements _HomeblocState {
+  const _$_HomeblocState(
+      {required this.isLoading,
+      required this.apimodel,
+      required this.apiFailureOrSuccessOption});
 
   @override
-  String toString() {
-    return 'HomeblocState.initial()';
+  final bool isLoading;
+  @override
+  final List<ArtivaticApiModel> apimodel;
+  @override
+  final Option<Either<MainFailure, List<ArtivaticApiModel>>>
+      apiFailureOrSuccessOption;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'HomeblocState(isLoading: $isLoading, apimodel: $apimodel, apiFailureOrSuccessOption: $apiFailureOrSuccessOption)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'HomeblocState'))
+      ..add(DiagnosticsProperty('isLoading', isLoading))
+      ..add(DiagnosticsProperty('apimodel', apimodel))
+      ..add(DiagnosticsProperty(
+          'apiFailureOrSuccessOption', apiFailureOrSuccessOption));
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _Initial);
+        (other.runtimeType == runtimeType &&
+            other is _HomeblocState &&
+            const DeepCollectionEquality().equals(other.isLoading, isLoading) &&
+            const DeepCollectionEquality().equals(other.apimodel, apimodel) &&
+            const DeepCollectionEquality().equals(
+                other.apiFailureOrSuccessOption, apiFailureOrSuccessOption));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(isLoading),
+      const DeepCollectionEquality().hash(apimodel),
+      const DeepCollectionEquality().hash(apiFailureOrSuccessOption));
 
+  @JsonKey(ignore: true)
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-  }) {
-    return initial();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-  }) {
-    return initial?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-  }) {
-    return initial(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-  }) {
-    return initial?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial(this);
-    }
-    return orElse();
-  }
+  _$HomeblocStateCopyWith<_HomeblocState> get copyWith =>
+      __$HomeblocStateCopyWithImpl<_HomeblocState>(this, _$identity);
 }
 
-abstract class _Initial implements HomeblocState {
-  const factory _Initial() = _$_Initial;
+abstract class _HomeblocState implements HomeblocState {
+  const factory _HomeblocState(
+      {required bool isLoading,
+      required List<ArtivaticApiModel> apimodel,
+      required Option<Either<MainFailure, List<ArtivaticApiModel>>>
+          apiFailureOrSuccessOption}) = _$_HomeblocState;
+
+  @override
+  bool get isLoading;
+  @override
+  List<ArtivaticApiModel> get apimodel;
+  @override
+  Option<Either<MainFailure, List<ArtivaticApiModel>>>
+      get apiFailureOrSuccessOption;
+  @override
+  @JsonKey(ignore: true)
+  _$HomeblocStateCopyWith<_HomeblocState> get copyWith =>
+      throw _privateConstructorUsedError;
 }
