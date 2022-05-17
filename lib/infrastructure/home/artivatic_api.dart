@@ -19,11 +19,12 @@ class ArtivaticRepo implements IArtivaticApi {
         Endpoints.artivaticapi,
       );
       if (responce.statusCode == 200 || responce.statusCode == 201) {
-        Map<String, dynamic> jsondata = jsonDecode(responce.data);
+        log("reached 1");
+        final jsondata =
+            json.decode(json.encode(responce.data)) as Map<String, dynamic>;
         final popularList = (jsondata["rows"] as List).map((e) {
           return ArtivaticApiModel.fromJson(e);
         }).toList();
-        log(popularList.toString());
         return Right(popularList);
       } else {
         return const Left(MainFailure.serverFailure());

@@ -100,21 +100,12 @@ class __$GetArtivaticApiCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_GetArtivaticApi
-    with DiagnosticableTreeMixin
-    implements _GetArtivaticApi {
+class _$_GetArtivaticApi implements _GetArtivaticApi {
   const _$_GetArtivaticApi();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'HomeblocEvent.getArtivaticApi()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-        .add(DiagnosticsProperty('type', 'HomeblocEvent.getArtivaticApi'));
   }
 
   @override
@@ -313,7 +304,7 @@ class __$HomeblocStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_HomeblocState with DiagnosticableTreeMixin implements _HomeblocState {
+class _$_HomeblocState implements _HomeblocState {
   const _$_HomeblocState(
       {required this.isLoading,
       required this.apimodel,
@@ -328,19 +319,8 @@ class _$_HomeblocState with DiagnosticableTreeMixin implements _HomeblocState {
       apiFailureOrSuccessOption;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'HomeblocState(isLoading: $isLoading, apimodel: $apimodel, apiFailureOrSuccessOption: $apiFailureOrSuccessOption)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'HomeblocState'))
-      ..add(DiagnosticsProperty('isLoading', isLoading))
-      ..add(DiagnosticsProperty('apimodel', apimodel))
-      ..add(DiagnosticsProperty(
-          'apiFailureOrSuccessOption', apiFailureOrSuccessOption));
   }
 
   @override

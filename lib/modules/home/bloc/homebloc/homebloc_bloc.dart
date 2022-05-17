@@ -4,15 +4,15 @@ import 'package:artivatic/core/failures/mainFailure.dart';
 import 'package:artivatic/modules/home/repository/i_artivatic_api.dart';
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
-import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-
+import 'package:injectable/injectable.dart';
 import '../../model/artivaticApi.dart';
 
 part 'homebloc_event.dart';
 part 'homebloc_state.dart';
 part 'homebloc_bloc.freezed.dart';
 
+@injectable
 class HomeblocBloc extends Bloc<HomeblocEvent, HomeblocState> {
   final IArtivaticApi _artivaticApi;
   HomeblocBloc(this._artivaticApi) : super(HomeblocState.initial()) {

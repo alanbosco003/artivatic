@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 
@@ -11,8 +12,8 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     // BlocProvider.of<SearchBloc>(context).add(const SearchEvent.initialze());
 
-    // BlocProvider.of<PopularpackagesBloc>(context)
-    //     .add(const PopularpackagesEvent.getpopularpackages());
+    BlocProvider.of<HomeblocBloc>(context)
+        .add(const HomeblocEvent.getArtivaticApi());
     return Scaffold(
       body: Center(
         child: Text(
