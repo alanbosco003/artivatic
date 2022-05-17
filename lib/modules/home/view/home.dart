@@ -1,3 +1,4 @@
+import 'package:artivatic/modules/home/widgets/loadingButton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -12,30 +13,44 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // BlocProvider.of<SearchBloc>(context).add(const SearchEvent.initialze());
-
     BlocProvider.of<HomeblocBloc>(context)
         .add(const HomeblocEvent.getArtivaticApi());
-    return Scaffold(body: BlocBuilder<HomeblocBloc, HomeblocState>(
-      builder: (context, state) {
-        if (state.isLoading) {
-          return Center(
-            child: Center(
-              child: SizedBox(
-                width: 25.w,
-                height: 25.w,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(16.0),
-                  child: Image.asset(
-                    "assets/images/loading.gif",
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-            ),
-          );
-        }
-        return ArtivaticList();
-      },
-    ));
+    return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        centerTitle: true,
+        backgroundColor: Colors.grey[400],
+        title: Text(
+          "About Canada",
+          textAlign: TextAlign.justify,
+          style: GoogleFonts.anton(
+            color: Colors.black,
+            textStyle: Theme.of(context).textTheme.headline4,
+            fontSize: 21,
+            fontWeight: FontWeight.w500,
+            fontStyle: FontStyle.normal,
+          ),
+        ),
+      ),
+      body: BlocBuilder<HomeblocBloc, HomeblocState>(
+        builder: (context, state) {
+          if (state.isLoading) {
+            return const ShowLoading();
+          }
+          return const ArtivaticList();
+        },
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.grey,
+        child: const Icon(
+          Icons.refresh,
+          color: Colors.white,
+        ),
+        onPressed: () {
+          BlocProvider.of<HomeblocBloc>(context)
+              .add(const HomeblocEvent.getArtivaticApi());
+        },
+      ),
+    );
   }
 }
