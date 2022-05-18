@@ -1,6 +1,4 @@
-import 'dart:developer';
 import 'package:artivatic/core/failures/mainFailure.dart';
-import 'package:artivatic/modules/home/models/artivaticTitleApiClass/artivaticTitleApi.dart';
 import 'package:artivatic/modules/home/repository/i_artivaticTitle_api.dart';
 import 'package:artivatic/modules/home/repository/i_artivatic_api.dart';
 import 'package:bloc/bloc.dart';

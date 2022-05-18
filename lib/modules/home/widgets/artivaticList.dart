@@ -18,6 +18,7 @@ class ArtivaticList extends StatelessWidget {
           itemBuilder: (context, index) {
             return Padding(
               padding: EdgeInsets.all(2.w),
+              // each list inside the container.
               child: Container(
                 decoration: BoxDecoration(
                     borderRadius: const BorderRadius.all(Radius.circular(8)),
@@ -66,7 +67,7 @@ class ArtivaticList extends StatelessWidget {
                           const SizedBox(
                             width: 5,
                           ),
-                          //Title
+                          //Title and subltile
                           Column(
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -85,6 +86,7 @@ class ArtivaticList extends StatelessWidget {
                                   ),
                                 ),
                               ),
+                              //subtitle
                               SizedBox(
                                 width: 68.w,
                                 child: Padding(

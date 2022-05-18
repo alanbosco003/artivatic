@@ -2,8 +2,6 @@ import 'package:artivatic/modules/home/widgets/appbarTitle.dart';
 import 'package:artivatic/modules/home/widgets/loadingButton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:sizer/sizer.dart';
 
 import '../bloc/homebloc/homebloc_bloc.dart';
 import '../widgets/artivaticList.dart';
@@ -24,9 +22,11 @@ class Home extends StatelessWidget {
           title: const MyTitle()),
       body: BlocBuilder<HomeblocBloc, HomeblocState>(
         builder: (context, state) {
+          //showing loading state.
           if (state.isLoading) {
             return const ShowLoading();
           }
+          //showing the list after the data is fetched.
           return const ArtivaticList();
         },
       ),
@@ -37,6 +37,7 @@ class Home extends StatelessWidget {
           color: Colors.white,
         ),
         onPressed: () {
+          //api is called again
           BlocProvider.of<HomeblocBloc>(context)
               .add(const HomeblocEvent.getArtivaticApi());
         },

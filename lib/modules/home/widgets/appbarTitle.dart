@@ -12,7 +12,6 @@ class MyTitle extends StatelessWidget {
     return BlocBuilder<HomeblocBloc, HomeblocState>(
       builder: (context, state) {
         return Text(
-          // "About canada",
           state.topTitle,
           textAlign: TextAlign.justify,
           style: GoogleFonts.anton(
