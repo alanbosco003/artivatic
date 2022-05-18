@@ -183,11 +183,13 @@ class _$HomeblocStateTearOff {
   const _$HomeblocStateTearOff();
 
   _HomeblocState call(
-      {required bool isLoading,
+      {required String topTitle,
+      required bool isLoading,
       required List<ArtivaticApiModel> apimodel,
       required Option<Either<MainFailure, List<ArtivaticApiModel>>>
           apiFailureOrSuccessOption}) {
     return _HomeblocState(
+      topTitle: topTitle,
       isLoading: isLoading,
       apimodel: apimodel,
       apiFailureOrSuccessOption: apiFailureOrSuccessOption,
@@ -200,6 +202,7 @@ const $HomeblocState = _$HomeblocStateTearOff();
 
 /// @nodoc
 mixin _$HomeblocState {
+  String get topTitle => throw _privateConstructorUsedError;
   bool get isLoading => throw _privateConstructorUsedError;
   List<ArtivaticApiModel> get apimodel => throw _privateConstructorUsedError;
   Option<Either<MainFailure, List<ArtivaticApiModel>>>
@@ -216,7 +219,8 @@ abstract class $HomeblocStateCopyWith<$Res> {
           HomeblocState value, $Res Function(HomeblocState) then) =
       _$HomeblocStateCopyWithImpl<$Res>;
   $Res call(
-      {bool isLoading,
+      {String topTitle,
+      bool isLoading,
       List<ArtivaticApiModel> apimodel,
       Option<Either<MainFailure, List<ArtivaticApiModel>>>
           apiFailureOrSuccessOption});
@@ -233,11 +237,16 @@ class _$HomeblocStateCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? topTitle = freezed,
     Object? isLoading = freezed,
     Object? apimodel = freezed,
     Object? apiFailureOrSuccessOption = freezed,
   }) {
     return _then(_value.copyWith(
+      topTitle: topTitle == freezed
+          ? _value.topTitle
+          : topTitle // ignore: cast_nullable_to_non_nullable
+              as String,
       isLoading: isLoading == freezed
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
@@ -262,7 +271,8 @@ abstract class _$HomeblocStateCopyWith<$Res>
       __$HomeblocStateCopyWithImpl<$Res>;
   @override
   $Res call(
-      {bool isLoading,
+      {String topTitle,
+      bool isLoading,
       List<ArtivaticApiModel> apimodel,
       Option<Either<MainFailure, List<ArtivaticApiModel>>>
           apiFailureOrSuccessOption});
@@ -281,11 +291,16 @@ class __$HomeblocStateCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? topTitle = freezed,
     Object? isLoading = freezed,
     Object? apimodel = freezed,
     Object? apiFailureOrSuccessOption = freezed,
   }) {
     return _then(_HomeblocState(
+      topTitle: topTitle == freezed
+          ? _value.topTitle
+          : topTitle // ignore: cast_nullable_to_non_nullable
+              as String,
       isLoading: isLoading == freezed
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
@@ -306,10 +321,13 @@ class __$HomeblocStateCopyWithImpl<$Res>
 
 class _$_HomeblocState implements _HomeblocState {
   const _$_HomeblocState(
-      {required this.isLoading,
+      {required this.topTitle,
+      required this.isLoading,
       required this.apimodel,
       required this.apiFailureOrSuccessOption});
 
+  @override
+  final String topTitle;
   @override
   final bool isLoading;
   @override
@@ -320,7 +338,7 @@ class _$_HomeblocState implements _HomeblocState {
 
   @override
   String toString() {
-    return 'HomeblocState(isLoading: $isLoading, apimodel: $apimodel, apiFailureOrSuccessOption: $apiFailureOrSuccessOption)';
+    return 'HomeblocState(topTitle: $topTitle, isLoading: $isLoading, apimodel: $apimodel, apiFailureOrSuccessOption: $apiFailureOrSuccessOption)';
   }
 
   @override
@@ -328,6 +346,7 @@ class _$_HomeblocState implements _HomeblocState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _HomeblocState &&
+            const DeepCollectionEquality().equals(other.topTitle, topTitle) &&
             const DeepCollectionEquality().equals(other.isLoading, isLoading) &&
             const DeepCollectionEquality().equals(other.apimodel, apimodel) &&
             const DeepCollectionEquality().equals(
@@ -337,6 +356,7 @@ class _$_HomeblocState implements _HomeblocState {
   @override
   int get hashCode => Object.hash(
       runtimeType,
+      const DeepCollectionEquality().hash(topTitle),
       const DeepCollectionEquality().hash(isLoading),
       const DeepCollectionEquality().hash(apimodel),
       const DeepCollectionEquality().hash(apiFailureOrSuccessOption));
@@ -349,11 +369,14 @@ class _$_HomeblocState implements _HomeblocState {
 
 abstract class _HomeblocState implements HomeblocState {
   const factory _HomeblocState(
-      {required bool isLoading,
+      {required String topTitle,
+      required bool isLoading,
       required List<ArtivaticApiModel> apimodel,
       required Option<Either<MainFailure, List<ArtivaticApiModel>>>
           apiFailureOrSuccessOption}) = _$_HomeblocState;
 
+  @override
+  String get topTitle;
   @override
   bool get isLoading;
   @override

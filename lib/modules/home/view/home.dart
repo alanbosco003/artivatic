@@ -1,3 +1,4 @@
+import 'package:artivatic/modules/home/widgets/appbarTitle.dart';
 import 'package:artivatic/modules/home/widgets/loadingButton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -17,21 +18,10 @@ class Home extends StatelessWidget {
         .add(const HomeblocEvent.getArtivaticApi());
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
-        centerTitle: true,
-        backgroundColor: Colors.grey[400],
-        title: Text(
-          "About Canada",
-          textAlign: TextAlign.justify,
-          style: GoogleFonts.anton(
-            color: Colors.black,
-            textStyle: Theme.of(context).textTheme.headline4,
-            fontSize: 21,
-            fontWeight: FontWeight.w500,
-            fontStyle: FontStyle.normal,
-          ),
-        ),
-      ),
+          elevation: 0,
+          centerTitle: true,
+          backgroundColor: Colors.grey[400],
+          title: const MyTitle()),
       body: BlocBuilder<HomeblocBloc, HomeblocState>(
         builder: (context, state) {
           if (state.isLoading) {
