@@ -1,16 +1,44 @@
 # artivatic
+This is a project which fetch's a simple api and showing the results in a list view.
+## architecture
+**Clean architecture**
 
-A new Flutter project.
+Clean architecture is a software design philosophy that separates the elements of a design into ring levels. An important goal of clean architecture is to provide developers with a way to organize code in such a way that it encapsulates the business logic but keeps it separate from the delivery mechanism.
 
-## Getting Started
+## State Management
+**Bloc Library**
 
-This project is a starting point for a Flutter application.
+Bloc was designed to meet all of these needs and many more.
 
-A few resources to get you started if this is your first Flutter project:
+Bloc was designed with three core values in mind:
+Simple: Easy to understand & can be used by developers with varying skill levels.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Powerful: Help make amazing, complex applications by composing them of smaller components.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Testable: Easily test every aspect of an application so that we can iterate with confidence.
+
+Overall, Bloc attempts to make state changes predictable by regulating when a state change can occur and enforcing a single way to change state throughout an entire application.
+
+## network library
+**Dio**
+
+## dependency injection library
+**injectable**
+
+## Service Locator
+**Get_it**
+
+This is a simple Service Locator for Dart and Flutter projects with some additional goodies highly inspired by Splat. It can be used instead of InheritedWidget or Provider to access objects e.g. from your UI.
+
+## Code Generator
+**Freezed**
+
+Dart is also missing features such as union types and pattern-matching.
+Implementing all of this can take hundreds of lines, which are error-prone and the readability of your model significantly.
+Freezed tries to fix that by implementing most of this for you, allowing you to focus on the definition of your model.
+
+## Responsive Ui
+**Sizer**
+
+## Functional Programming
+**Dartz**
